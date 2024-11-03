@@ -26,7 +26,7 @@ namespace ExpenseCalculator
 
             MessageBox.Show($"Расходы добавлены:{name},\nСумма{amount}: \nКатегория: {category}\n", "Подтверждение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             total_exp += amount;
-            TotalExpenses.Text = $"ÎОбщая сумма расходов: {total_exp}";
+            TotalExpenses.Text = $"Общая сумма расходов: {total_exp}";
         }
         private void ExpensesName_TextChanged(object sender, EventArgs e)
         {}
