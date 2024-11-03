@@ -17,16 +17,16 @@ namespace ExpenseCalculator
         {
             if (string.IsNullOrWhiteSpace(ExpensesName.Text) || CategoryName.SelectedIndex == -1)
             {
-                MessageBox.Show("Заполните все поля.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Р—Р°РїРѕР»РЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ.", "РћС€РёР±РєР°", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string name = ExpensesName.Text;
             string category = CategoryName.SelectedItem?.ToString();
             decimal amount = ExpensesSum.Value;
 
-            MessageBox.Show($"Расходы добавлены:{name},\nСумма{amount}: \nКатегория: {category}\n", "Подтверждение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Р Р°СЃС…РѕРґС‹ РґРѕР±Р°РІР»РµРЅС‹:{name},\nРЎСѓРјРјР°{amount}: \nРљР°С‚РµРіРѕСЂРёСЏ: {category}\n", "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             total_exp += amount;
-            TotalExpenses.Text = $"Общая сумма расходов: {total_exp}";
+            TotalExpenses.Text = $"ГЋРћР±С‰Р°СЏ СЃСѓРјРјР° СЂР°СЃС…РѕРґРѕРІ: {total_exp}";
         }
         private void ExpensesName_TextChanged(object sender, EventArgs e)
         {}
@@ -41,7 +41,7 @@ namespace ExpenseCalculator
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            TimerLabel.Text = $"Время: {DateTime.Now:HH:mm:ss}";
+            TimerLabel.Text = $"Р’СЂРµРјСЏ: {DateTime.Now:HH:mm:ss}";
         }
 
        
